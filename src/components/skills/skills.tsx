@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { SkillsProps } from "./skills.types";
-import { buffer } from "stream/consumers";
 
 export const Skills = (props: SkillsProps) => {
     const { skills } = props;

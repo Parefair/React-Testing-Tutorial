@@ -6,7 +6,9 @@
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "@mui/material": "^5.15.19",
-    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/dom": "^10.1.0",
+    "@testing-library/jest-dom": "^6.4.5",
+    "@testing-library/react": "^16.0.0",
     "@testing-library/user-event": "^14.5.2",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.98",
@@ -25,12 +27,14 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "lint": "eslint --ignore-path .gitignore .",
     "coverage": "react-scripts test --coverage --watchAll --collectCoverageFrom='src/components/**/*.{ts,tsx}' --collectCoverageFrom='!src/components/**/*.{types,stories,constants,test,spec}.{ts,tsx}'"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "plugin:jest-dom/recommended"
     ]
   },
   "browserslist": {
@@ -47,7 +51,7 @@
   },
   "devDependencies": {
     "@babel/plugin-transform-private-property-in-object": "^7.24.6",
-    "@testing-library/react": "^16.0.0",
+    "eslint-plugin-jest-dom": "^5.4.0",
     "msw": "^2.3.1"
   },
   "jest": {
